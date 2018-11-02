@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="27dp"
+        android:id="@+id/play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/icon_audio_play"
+        android:layout_height="27dp" />
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="27dp"
+        android:id="@+id/pause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/icon_audio_pause"
+        android:layout_height="27dp" />
+
+
+    <TextView
+        android:id="@+id/text"
+        android:text="暂停和开始"
+        app:layout_constraintLeft_toRightOf="@id/play"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content" />
+
+
+    <com.google.android.exoplayer2.ui.DefaultTimeBar
+        android:id="@id/exo_progress"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toRightOf="@id/play"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        app:bar_height="1dp"
+        app:touch_target_height="3dp"
+        app:ad_marker_width="3dp"
+        android:layout_marginRight="10dp"
+        app:hide_on_touch="false"
+        app:hide_during_ads="false"
+        app:buffered_color="#33ee2d1b"
+        app:scrubber_color="#ee2d1b"
+        app:played_color="#ee2d1b"
+        app:scrubber_enabled_size="7dp"
+        app:scrubber_dragged_size="7dp"
+        app:scrubber_drawable="@mipmap/icon_progress_mark"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:layout_height="12dp" />
+
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        app:layout_constraintTop_toBottomOf="@id/exo_progress"
+        android:text="00:00"
+        android:textColor="#999999"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@id/text"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        app:layout_constraintTop_toBottomOf="@id/exo_progress"
+        android:text="00:00"
+        android:textColor="#999999"
+        android:textSize="11sp"
+        app:layout_constraintRight_toRightOf="@id/text"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>
